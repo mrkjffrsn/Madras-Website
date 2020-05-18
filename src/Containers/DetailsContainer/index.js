@@ -3,12 +3,14 @@ import { connect } from 'react-redux'
 
 function DetailsContainer( props ){
 
+  const { id } = props.match.params
+
   function onClick( e ){
     props.onClick( 10 )
   }
 
   return (
-    <span onClick={ onClick }> Details Page { props.value } </span>
+    <span onClick={ onClick }> Details Page { id } </span>
   )
 
 }
