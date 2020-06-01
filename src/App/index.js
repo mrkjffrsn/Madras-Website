@@ -1,9 +1,9 @@
 import React from 'react';
 import { Provider } from 'react-redux'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import store from './Store'
-import HomeContainer from './Containers/HomeContainer'
-import DetailsContainer from './Containers/DetailsContainer';
+import store from './state/store'
+import HomeContainer from '../Containers/HomeContainer'
+import DetailsContainer from '../Containers/DetailsContainer';
 
 /*
   Set Up Redux Store Here
