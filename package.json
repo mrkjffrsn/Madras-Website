@@ -36,7 +36,5 @@
     ]
   },
   "homepage": "http://mrkjffrsn.github.io/Madras-Website",
-  "devDependencies": {
-    "gh-pages": "^3.0.0"
-  }
+  "devDependencies": {}
 }
