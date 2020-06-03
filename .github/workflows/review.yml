@@ -1,0 +1,26 @@
+name: Review - Lints, Unit Tests...etc
+
+on:
+  pull_request:
+    branches: [ develop ]
+    types: [ opened, synchronize, reopened ]
+
+jobs:
+
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code Repository
+      uses: actions/checkout@v2
+
+    - name: Set up node 
+      uses: actions/setup-node@v1
+      with:
+        node_version: '12.x'
+      
+    - name: Install packages and create build
+      run: |
+        node -v
+        npm install
+        npm run test

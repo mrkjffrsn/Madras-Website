@@ -1,26 +1,18 @@
-# This workflow run's test, prepares a build and deploys the application to gh-pages
-
-name: CI/CD - Test, Build & Deploy
+name: Build & Deploy
 
 on:
   push:
     tags: 'v*.*.*'
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
 
-  # This workflow contains a single job called "test"
   test:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - name: Checkout Code Repository
       uses: actions/checkout@v2
 
-    # Runs a set of commands using the runners shell
     - name: Set up node 
       uses: actions/setup-node@v1
       with:
@@ -31,24 +23,21 @@ jobs:
         node -v
         npm install
         npm run test
-  
-  build:
+
+  deploy:
     runs-on: ubuntu-latest
     needs: [ test ]
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - name: Checkout Code Repository
       uses: actions/checkout@v2
 
-    # Runs a set of commands using the runners shell
     - name: Set up node 
       uses: actions/setup-node@v1
       with:
         node_version: '12.x'
       
-    - name: Install packages and create build
+    - name: Prepare Build
       run: |
         node -v
         npm install
