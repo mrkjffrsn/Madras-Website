@@ -18,7 +18,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint 'src/**/*.js' "
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -36,5 +37,11 @@
     ]
   },
   "homepage": "http://mrkjffrsn.github.io/Madras-Website",
-  "devDependencies": {}
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "eslint": "^6.6.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-react": "^7.20.0"
+  }
 }
