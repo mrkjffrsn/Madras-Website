@@ -8,7 +8,6 @@ import DetailsContainer from '../Containers/DetailsContainer';
 /*
   Set Up Redux Store Here
 */
-
 function App() {
 
   return (

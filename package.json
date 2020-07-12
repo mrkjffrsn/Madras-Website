@@ -24,6 +24,14 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "eslintIgnore": [
+    "src/**/*.spec.js",
+    "src/**/*.test.js",
+    "src/fonts/*.ttf",
+    "setupTests.js",
+    "serviceWorker.js",
+    "index.js"
+  ],
   "browserslist": {
     "production": [
       ">0.2%",
