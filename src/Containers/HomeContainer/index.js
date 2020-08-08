@@ -1,10 +1,15 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import middleware from '../../Middleware'
 
 function HomeContainer( props ){
 
   const onClick = ( e ) => {
-    props.onClick( 5 )
+    // props.onClick( 5 )
+    const query = '*[_type == "playlist"]'
+    /* middleware.contentDataSource.client.fetch(query).then( ( data   )=>{
+      console.log("Data is :", data)
+    }) */
   }
 
   return (
